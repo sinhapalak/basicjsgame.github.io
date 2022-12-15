@@ -15,19 +15,19 @@ setTimeout(() => {
 
 function checkkey(e){
 console.log(e.key);
-if(e.key == 'ArrowUp'){
-player = document.querySelector('.player');
-player.classList.add('animatePlayer');
-setTimeout(() => {
-    player.classList.remove('animatePlayer')
-}, 700);
+if(e.key == 'ArrowUp' || e.key == 'w'){
+    player = document.querySelector('.player');
+    player.classList.add('animatePlayer');
+    setTimeout(() => {
+        player.classList.remove('animatePlayer')
+    }, 700);
 }
-if(e.key == 'ArrowRight'){
+if(e.key == 'ArrowRight' || e.key == 'd'){
     player = document.querySelector('.player');
     playerX = parseInt(window.getComputedStyle(player, null).getPropertyValue('left'));
     player.style.left = playerX + 112 +"px";
     }
-if(e.key == 'ArrowLeft'){
+if(e.key == 'ArrowLeft' || e.key == 'a'){
         player = document.querySelector('.player');
         playerX = parseInt(window.getComputedStyle(player, null).getPropertyValue('left'));
         player.style.left = (playerX - 112) +"px";
